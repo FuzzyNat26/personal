@@ -1,0 +1,41 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --ifm-color-primary: #158463;
+    --ifm-color-primary-dark: #137759;
+    --ifm-color-primary-darker: #127054;
+    --ifm-color-primary-darkest: #0f5c45;
+    --ifm-color-primary-light: #17916d;
+    --ifm-color-primary-lighter: #189872;
+    --ifm-color-primary-lightest: #1bac81;
+    /* --ifm-navbar-background-color: #ffffffcc; */
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+    --ifm-color-primary: #20c997;
+    --ifm-color-primary-dark: #1db588;
+    --ifm-color-primary-darker: #1bab80;
+    --ifm-color-primary-darkest: #168d6a;
+    --ifm-color-primary-light: #24dca6;
+    --ifm-color-primary-lighter: #2edeaa;
+    --ifm-color-primary-lightest: #4ce3b6;
+    /* --ifm-navbar-background-color: #242526cc; */
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* .navbar {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+} */
