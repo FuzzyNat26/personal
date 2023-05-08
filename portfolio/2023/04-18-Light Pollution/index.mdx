@@ -4,14 +4,16 @@ title: Light Pollution
 authors: [jonathan]
 tags: [Mobile Development, SwiftUI, Programming, Design, WWDC]
 description: Light Pollution is a Swift Playground dedicated for exploring Light Pollution Phenomenon. Submitted as a part of WWDC23 Swift Student Challenge. This playground consists of six main contents with interactive elements on each page with modular components to closely resembles real-life light pollution.
-image: ./assets/light-pollution-cover.png
+image: ./assets/light-pollution-cover.webp
 ---
 
 # Light Pollution
 
+import Callout from "@site/src/components/Callout";
+
 <img
-    src={require("./assets/light-pollution-cover.png").default}
-    className="md:w-4/5"
+    src={require("./assets/light-pollution-cover.webp").default}
+    className="md:w-4/5 w-full mb-4"
     alt="A cover image for Light Pollution app"
 />
 
@@ -36,8 +38,8 @@ In this playground, let's learn about this phenomenon together: what it is, why 
 ### Low-fidelity
 
 <img
-    src={require("./assets/light-pollution-lofid-1.png").default}
-    className="md:w-4/5"
+    src={require("./assets/light-pollution-lofid-1.webp").default}
+    className="md:w-4/5 w-full mb-4"
     alt="Low fidelity prototype for Light Pollution app"
 />
 
@@ -65,19 +67,28 @@ In this playground, let's learn about this phenomenon together: what it is, why 
 ## Screenshots:
 
 <img
-    src={require("./assets/light-pollution-mockup-1.png").default}
-    className="md:w-4/5"
+    src={require("./assets/light-pollution-mockup-1.webp").default}
+    className="md:w-4/5 w-full mb-4"
     alt="Mockup for Light Pollution app"
 />
 
 ## Takeaways:
 
-> 🔭 Although my initial interest in this topic was to discuss the impact of light pollution on my dark-sky view, I have since discovered that it has wider implications on both the environment and human health.
->
-> Also just discovered that my hometown have bortle scale of 4, which is pretty fine considering it surrounded by city and Singapore!
+<Callout Icon="🔭" Color="bg-green-400 border-l-green-400">
+    Although my initial interest in this topic was to discuss the impact of
+    light pollution on my dark-sky view, I have since discovered that it has
+    wider implications on both the environment and human health.
+    <br />
+    <br />
+    Also just discovered that my hometown have bortle scale of 4, which is pretty
+    fine considering it surrounded by city and Singapore!
+</Callout>
 
 ## Credits/Shoutouts:
 
-Detailed credits can be found on GitHub link below
+Detailed credits can be found on GitHub via [this link](https://github.com/FuzzyNat26/light-pollution).
 
-https://github.com/FuzzyNat26/light-pollution
+## Others:
+
+To discuss the development process of this Swift Playground, I wrote a blog post sharing my
+development process that can be found via [this link](https://fuzzynat26.github.io/personal/blog/swift-student-challenge-development-process-light-pollution-swift-playground).

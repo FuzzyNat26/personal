@@ -4,9 +4,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 
-import personalAvatarUrl from "@site/static/img/personal_avatar.png";
-import clsx from "clsx";
-
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
     const repositoryUrl =
@@ -20,7 +17,7 @@ function HomepageHeader() {
                 <div className="container text-center py-16">
                     <img
                         className="w-[280px] h-[280px] rounded-full"
-                        src={personalAvatarUrl}
+                        src={"https://github.com/FuzzyNat26.png"}
                         alt="Jonathan's Personal Avatar"
                     />
                     <h1 className="text-2xl sm:text-4xl">{siteConfig.title}</h1>

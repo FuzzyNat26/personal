@@ -12,18 +12,18 @@ tags:
         Machine Learning,
     ]
 description: ParuParuKu is a Flask-based web application for detecting pneumonia from X-ray images that helps patients detect pneumonia early. ParuParuKu uses the best 3 out of 5 models that have been compared to provide users with highest accuracy prediction as possible.
-image: ./assets/paruparuku-cover.jpg
+image: ./assets/paruparuku-cover.webp
 ---
 
 # ParuParuKu
 
+import Callout from "@site/src/components/Callout";
+
 <img
-    src={require("./assets/paruparuku-cover.jpg").default}
-    className="md:w-4/5"
+    src={require("./assets/paruparuku-cover.webp").default}
+    className="md:w-4/5 w-full mb-4"
     alt="A cover image for ParuParuKu app"
 />
-
-## Project Overview:
 
 **ParuParuKu** is a Flask-based web application for detecting pneumonia from X-ray images that helps patients detect pneumonia early.
 
@@ -44,8 +44,8 @@ There are times when doctors aren't available to make a diagnosis on recently pe
 ## Flowchart:
 
 <img
-    src={require("./assets/paruparuku-flowchart.png").default}
-    className="md:w-4/5"
+    src={require("./assets/paruparuku-flowchart.webp").default}
+    className="md:w-4/5 w-full mb-4"
     alt="A flowchart of ParuParuKu"
 />
 
@@ -54,8 +54,8 @@ There are times when doctors aren't available to make a diagnosis on recently pe
 Since this application provides multiple languages, the sitemap provided is as below.
 
 <img
-    src={require("./assets/paruparuku-sitemap.png").default}
-    className="md:w-4/5"
+    src={require("./assets/paruparuku-sitemap.webp").default}
+    className="md:w-4/5 w-full mb-4"
     alt="A sitemap of ParuParuKu"
 />
 
@@ -88,7 +88,9 @@ Since this application provides multiple languages, the sitemap provided is as b
 7. Scipy
 8. OpenCV
 
-> ☝ Defined in [Requirements.txt](#requirementstxt) for docker container.
+<Callout Icon="☝" Color="bg-yellow-500 border-l-yellow-500">
+    Defined in <a href="#requirementstxt">Requirements.txt</a> for docker container.
+</Callout>
 
 **Other Framework**
 
@@ -103,8 +105,8 @@ Since this application provides multiple languages, the sitemap provided is as b
 ## Screenshots:
 
 <img
-    src={require("./assets/paruparuku-mockup-cover.jpg").default}
-    className="md:w-4/5"
+    src={require("./assets/paruparuku-mockup-cover.webp").default}
+    className="md:w-4/5 w-full mb-4"
     alt="A mockup of ParuParuKu"
 />
 

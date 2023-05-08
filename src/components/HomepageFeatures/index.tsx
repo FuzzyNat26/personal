@@ -32,8 +32,8 @@ const FeatureList: FeatureItem[] = [
         title: "Current Activity",
         description: (
             <p>
-                Writing my thesis related to Machine Learning while explore iOS
-                Development and Web Development.
+                Writing my thesis related to Machine Learning while exploring
+                iOS and Web Development. Also preparing the next blog post 😉
             </p>
         ),
     },
@@ -41,8 +41,8 @@ const FeatureList: FeatureItem[] = [
         title: "About Me",
         description: (
             <p>
-                 WWDC2022 Swift Student Challenge Winner, UIB Information Systems Student, and Apple Developer
-                Academy @IL C22 Graduate.
+                 WWDC2022 Swift Student Challenge Winner, UIB Information
+                Systems Student, and Apple Developer Academy @IL C22 Graduate.
             </p>
         ),
     },
@@ -65,7 +65,11 @@ function Contact({ Svg, Link }: ContactItem) {
         <div className={clsx("")}>
             <div className="text--center">
                 <a href={Link} target="_blank">
-                    <Svg width={25} height={25} className="fill-black dark:fill-white hover:opacity-60" />
+                    <Svg
+                        width={25}
+                        height={25}
+                        className="fill-black dark:fill-white hover:opacity-60"
+                    />
                 </a>
             </div>
         </div>

@@ -35,7 +35,13 @@
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* .navbar {
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-} */
+[data-theme="light"] img[src$="#gh-dark-mode-only"],
+[data-theme="dark"] img[src$="#gh-light-mode-only"] {
+    display: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}

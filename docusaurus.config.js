@@ -39,11 +39,11 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: false,
-                // blog: {
-                //     showReadingTime: true,
-                //     blogDescription: "Blog articles that were written by Jonathan."
-                // },
-                blog: false,
+                blog: {
+                    showReadingTime: true,
+                    blogDescription:
+                        "Blog articles that were written by Jonathan.",
+                },
                 theme: {
                     customCss: require.resolve("./src/css/custom.css"),
                 },
@@ -54,18 +54,17 @@ const config = {
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
-            // Replace with your project's social card
-            image: "img/docusaurus-social-card.jpg",
+            // image: "img/personal_avatar.webp",
             navbar: {
                 title: "FuzzyNat26",
-                // logo: {
-                //   alt: 'My Site Logo',
-                //   src: 'img/personal_avatar.png',
-                // },
                 items: [
-                    { to: "/resume", label: "Resume", position: "right" },
-                    // { to: "/blog", label: "Blog", position: "right" },
-                    { to: "/portfolio", label: "Portfolio", position: "right" },
+                    { to: "/resume", label: "Resume", position: "left" },
+                    { to: "/blog", label: "Blog", position: "left" },
+                    { to: "/portfolio", label: "Portfolio", position: "left" },
+                    {
+                        type: "search",
+                        position: "right",
+                    },
                 ],
             },
             footer: {
@@ -77,6 +76,17 @@ const config = {
             },
             colorMode: {
                 defaultMode: "dark",
+            },
+            algolia: {
+                // The application ID provided by Algolia
+                appId: "NCZY281SXO",
+
+                // Public API key: it is safe to commit it
+                apiKey: "3a99d644230960a301c1f1c755f63348",
+
+                indexName: "personal",
+
+                contextualSearch: true,
             },
         }),
 
