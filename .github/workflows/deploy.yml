@@ -50,3 +50,22 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  scrape:
+    name: Run Algolia DocSearch Scraper
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Run DocSearch Scraper
+        run: |
+          docker run -i \
+            -e "APPLICATION_ID=${{ secrets.ALGOLIA_APPLICATION_ID }}" \
+            -e "API_KEY=${{ secrets.ALGOLIA_API_KEY }}" \
+            -e "CONFIG=$(cat docsearch_config.json | jq -r tostring)" \
+            algolia/docsearch-scraper
