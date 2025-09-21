@@ -1,0 +1,144 @@
+---
+slug: hanxie-handwriting-app
+title: Hanxie - Handwriting App
+authors: [jonathan]
+tags: [Mobile Development, Unity, Programming, Design, Backend Development]
+description: HanXie - Handwriting App is an application for Mandarin learners to learn and practice writing Mandarin characters with the help of Machine Learning. This application is submitted as a part of a research paper for my Bachelor of Information Systems degree at Universitas Internasional Batam.
+image: ./assets/hanxie-handwriting-cover.webp
+---
+
+# Hanxie Handwriting App
+
+import Callout from "@site/src/components/Callout";
+
+<img
+    src={require("./assets/hanxie-handwriting-cover.webp").default}
+    className="md:w-4/5 w-full mb-4 lightense"
+    alt="A cover image for Hanxie Handwriting app"
+/>
+
+**HanXie: Handwriting App** is an application for Mandarin learners to learn and practice writing Mandarin characters with the help of Machine Learning. This application is supported on both major mobile platforms: Android and iOS.
+
+This application is submitted as a part of a research paper for my Bachelor of Information Systems degree at Universitas Internasional Batam.
+
+<Callout Icon="👨‍🎓" Color="bg-gray-300 border-l-gray-300">The research article has been published and can be read through <a href="https://jurnal.iaii.or.id/index.php/RESTI/article/view/5505" target="_blank">this link</a>.</Callout>
+
+<!-- truncate -->
+
+## Problem Statement:
+
+The diversity of languages from one country to another requires the establishment of common languages to facilitate idea exchange, organizational collaboration, and overseas administration, such as **Mandarin**.
+
+Learning Mandarin involves four essential components: listening (听力 tīnglì), speaking (口语 kŏuyŭ), reading (阅读 yuèdú) and writing (写作 xiĕzuò). Among these skills, writing Mandarin characters (漢字 hánzì) is considered one of the most challenging journey for beginners.
+
+This complexity arises from the nature of character formation and the rules of writing Mandarin characters. Thus, tools are needed to support learners in this aspect.
+
+## Application Overview:
+
+<iframe
+    className="md:w-4/5 w-full aspect-video mb-4"
+    src="https://www.youtube.com/embed/DKutWqJEepg"
+    title="HanXie Handwriting App - Video Demo"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    frameBorder="0"
+    allowFullScreen="allowfullscreen"
+></iframe>
+
+This application consists of 99 levels: 82 HSK 1 singled characters and 17 tests. It communicates with an API server to predict the user's handwriting corresponds to the current level they're on.
+
+<img
+    src={require("./assets/hanxie-handwriting-application-flow.webp").default}
+    className="md:w-4/5 w-full mb-4 lightense"
+    alt="The flowchart of Hanxie Handwriting app"
+/>
+
+<Callout Icon="📘" Color="bg-gray-300 border-l-gray-300">You can learn more about the application through <a href="https://bit.ly/hanxie-guide" target="_blank">this guidebook</a>.</Callout>
+
+### Flask API Server
+
+The first iteration of the API server is developed using Flask. It is hosted on Google Cloud Run with similar configurations as [ParuParuKu](https://github.com/FuzzyNat26/paruparuku-ief-submission).
+
+Due to Google Cloud Run being a container-based serverless platform, the server will be shut down after a few minutes of inactivity and require around 7-10 seconds to start again.
+
+Several volunteers expressed their concern about this issue as they need to wait for the server to start before they can use the application. Therefore, a new server choice is explored after the research process is completed.
+
+### Express API Server
+
+As of 23 November 2023, ExpressJS is chosen as the framework due to its simplicity and flexibility. The server is hosted on Vercel as serverless functions with the same endpoints as the Flask server.
+
+The model was converted into ONNX format to be used in the server using [tf2onnx](https://github.com/onnx/tensorflow-onnx). The model is then loaded into the server using [onnxruntime-node](https://onnxruntime.ai/docs/get-started/with-javascript.html).
+
+## Screenshots:
+
+<img
+    src={require("./assets/hanxie-handwriting-ss-1.webp").default}
+    className="md:w-4/5 w-full mb-4 lightense"
+    alt="The interface of Hanxie Handwriting app"
+    loading="lazy"
+/>
+
+## Technologies:
+
+### Languages
+
+1. C#
+2. Python (Flask API Server)
+3. Javascript (Express API Server)
+
+### Frameworks / Libraries / Packages
+
+**Machine Learning Models**
+
+1. Tensorflow Keras
+2. Scikit-learn
+3. Numpy
+4. Seaborn (visualization purpose)
+5. Matplotlib (visualization purpose)
+6. Gdown (download sorted large datasets from google drives)
+7. Tf2onnx converter
+
+**Flask Server**
+
+1. Flask
+2. Flask Babel
+3. Tensorflow-CPU
+4. Pillow
+5. Gunicorn
+6. Werkzeug
+7. Scipy
+8. OpenCV
+
+**Express Server**
+
+1. ExpressJS
+2. ONNX Runtime (onnxruntime-node)
+3. Multer
+4. Canvas (node-canvas)
+5. ndarray
+
+**Mobile Application**
+
+1. Simple scroll snap
+2. Image with rounded corners
+3. Unity Firebase extensions
+
+### Tools
+
+1. Unity Engine
+2. Figma
+3. Visual Studio Community
+4. Visual Studio Code
+5. Notion
+6. Microsoft Excel
+7. Google Colaboratory
+
+## Takeaways:
+
+<Callout Icon="🔭" Color="bg-green-400 border-l-green-400">Due to some "dumb" decisions, this application is initially removed from my local GitHub folder without any backup. Hence, it requires me three full days to rebuild while being chased by deadline.<br /><br />Just a quick reminder to always commit your changes and push in on cloud server in case of something wrong on your local devices.</Callout>
+
+## Credits/Shoutouts:
+
+I'd like to express my gratitude to my family, partner, and friends for their support during my entire thesis journey.
+
+I want to give a special acknowledgment to Tony Wibowo for his support during my data collection process.
+Additionally, I extend my appreciation to Suwarno Liang for guiding me as my thesis lecturer.
